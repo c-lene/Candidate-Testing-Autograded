@@ -31,7 +31,7 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  if (candidateAnswer === correctAnswer) {                      // Add "\\" OR statement to accept LOWER Case answer - CT
+  if (candidateAnswer === correctAnswer) {                      // Add "\\" OR statement  or "else if" statement to accept LOWER Case answer - CT
     console.log("Good Job! Your answer is CORRECT!");
   } else {
     console.log("Sorry, your answer was INCORRECT. The correct answer is " + correctAnswer + ".");
