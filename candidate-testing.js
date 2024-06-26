@@ -61,8 +61,23 @@ function gradeQuiz(candidateAnswers) {
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+  
+  let candidateAnswersLowercase = candidateAnswers.toString().toLocaleLowerCase().split(",");
+  let correctAnswersLowercase = correctAnswers.toString().toLocaleLowerCase().split(",");
+  let correctAnswersNum = 0;
 
+  for (let i = 0; i < correctAnswers.length; i++) {
+    
+    if (candidateAnswersLowercase[i] === correctAnswersLowercase[i]) {
+      correctAnswersNum += 1;
+    }
+  }
+  
+  grade = (correctAnswersNum / questions.length) * 100;
 
+  console.log(`${candidateName} got ${correctAnswersNum} questions correct!
+    Your score is ${grade} %.`)
+  
   return grade;
 }
 
